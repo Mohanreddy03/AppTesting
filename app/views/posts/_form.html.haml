@@ -1,0 +1,20 @@
+%br/
+%h4 Add New Post
+= form_for(@post) do |f|
+  - if @post.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@post.errors.count, "error")
+        prohibited this restaurant from being saved:
+      - @post.errors.full_messages.each do |msg|
+        %p= msg
+    %br/
+  = f.label :posttitle,"Title"
+  = f.text_field :title
+  %br/
+  %br/ 
+  = f.label :postdesc,"Description"
+  = f.text_area :description, :cols => "35", :rows => "4"
+  %br/
+  %br/
+  = f.submit

@@ -22,6 +22,15 @@ end
 
 gem 'jquery-rails'
 
+gem 'haml'
+
+group :development do
+  gem 'hpricot'
+  gem 'ruby_parser'
+end
+
+gem 'whenever'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
